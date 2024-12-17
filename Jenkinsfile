@@ -9,24 +9,11 @@ pipeline {
     }
 
     stages {
-        stage('Cleanup') {
-            steps {
-                cleanWs()
-            }
-        }
-
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Verify Dockerfile') {
+        stage('Checkout Code') {
             steps {
                 script {
-                    if (!fileExists('Dockerfile')) {
-                        error "Dockerfile not found in the workspace."
-                    }
+                    // Explicitly check out the desired branch or commit
+                    git branch: 'main', url: 'https://github.com/your-repository.git'
                 }
             }
         }
@@ -52,6 +39,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
+                    // Apply Kubernetes deployment and service configurations
                     sh 'kubectl apply -f k8s/deployment.yaml'
                     sh 'kubectl apply -f k8s/service.yaml'
                 }
