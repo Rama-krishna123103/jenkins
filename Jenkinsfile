@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'ramakrishna123456/jenkins'
+        DOCKER_IMAGE = 'ramakrishna123456'
         KUBERNETES_NAMESPACE = 'default'
         DEPLOYMENT_NAME = 'iris-model-deployment'
         SERVICE_NAME = 'iris-model-service'
