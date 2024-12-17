@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Explicitly check out the desired branch or commit
-                    git branch: 'main', url: 'https://github.com/your-repository.git'
+                    git branch: 'main', url: 'https://github.com/Rama-krishna123103/jenkins.git/'
                 }
             }
         }
