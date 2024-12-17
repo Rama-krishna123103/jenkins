@@ -4,7 +4,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Copy the model and application files
-COPY iris_model.pkl /app/
+
 COPY app.py /app/
 
 # Install necessary packages
