@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/iris-model:latest'
+        DOCKER_IMAGE = 'ramakrishna123456/iris-model:latest'
         KUBERNETES_NAMESPACE = 'default'
         DEPLOYMENT_NAME = 'iris-model-deployment'
         SERVICE_NAME = 'iris-model-service'
