@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: iris-model
-        image: ramakrishna123456/iris-model:latest
+        image: ramakrishna123456/jenkins
         ports:
         - containerPort: 5000
